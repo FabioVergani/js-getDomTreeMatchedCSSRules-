@@ -1,5 +1,8 @@
 # js-getMatchedCSSRules
 
+
+collect:
+
 javascript:(function(w){
  const pseudo2ignore=/::?(a(fter|ctive)|b(ackdrop|efore)|checked|d(efault|i(r\(.*\)|sabled))|e(mpty|nabled)|first-l(etter|ine)|f(ocus(-within)?|ullscreen)|hover|in(-range|determinate|valid)|link|not\(.*\)|o(ptional|ut-of-range)|placeholder(-shown)?|re(ad-(only|write)|quired)|selection|target|v(alid|isited)|-moz-(progress-bar|range-(progress|thumb|track))|-ms-(fill(-(low|upp)er)?|t(humb|rack))|-webkit-(progress-(bar|value)|slider-(runnable-track|thumb)))+/g,selectorpart=/^.*(?={)/,mediaMatch=w.matchMedia,MediaRule=w.CSSMediaRule,StyleRule=w.CSSStyleRule,foundedRules={Other:[],Unused:[],Used:[]};
  for(let f=function(x){

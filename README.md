@@ -1,4 +1,4 @@
-# js-getMatchedCSSRules
+# js-getMatchedCSSRules > get-DomTree-MatchedCSSRules
 
 
 collect:

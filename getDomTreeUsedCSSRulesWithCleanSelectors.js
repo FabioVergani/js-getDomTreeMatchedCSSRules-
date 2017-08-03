@@ -11,9 +11,11 @@
                    if(e instanceof B){
                        const t=e.cssText;
                        if(E[0].test(t)!==true){
-                           for(let s,n=[],p=E[2],m=e.selectorText.split(','),l=m.length,i=0;i<l;++i){
-                               if(d.querySelector(p.test(s=m[i].trim())?s.replace(p,''):s)!==null){n.push(s)};
-                               if(n.length){D[0].push([n,t.replace(E[1],'')])}else{D[1].push(s)}
+                           for(let s,v,n=[],p=E[2],m=e.selectorText.split(','),l=m.length,i=0;i<l;++i){
+								s=m[i].trim(); 
+								v=p.test(s)?s.replace(p,'').trim():s;
+								if(v!==''){if(d.querySelector(v)!==null){n.push(s)}}else{n.push(s)};
+								if(n.length){D[0].push([n,t.replace(E[1],'')])}else{D[1].push(s)}
                            }						
                        }
                    }else{
